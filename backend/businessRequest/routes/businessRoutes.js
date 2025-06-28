@@ -4,7 +4,7 @@ const { createBusiness } = require("../controllers/businessController");
 const { validateBusiness } = require("../validations/businessValidation");
 const { validationResult } = require("express-validator");
 
-const Business = require("../models/Business");
+const Business = require("./models/Business");
 
 router.post("/", validateBusiness, (req, res, next) => {
   const errors = validationResult(req);
